@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Signup Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Sign Up</h2> 
+  <form>
+    <ul class="container">
+      <li class="row">
+        <label for="firstname">First name<span aria-label="required">*</span></label>
+        <input type="text" name="firstname" id="firstname" required>
+      </li>
+      <li class="row">
+        <label for="lastname">Last name<span aria-label="required">*</span></label>
+        <input type="text" name="lastname" id="lastname" required>
+      </li>
+      <li class="row">
+        <label for="email">Email<span aria-label="required">*</span></label>
+        <input type="email" name="email" id="email" required>
+      </li>
+      <li class="row">
+        <label for="phone">Phone Number<span aria-label="required">*</span></label>
+        <input type="tel" name="phoneNum" id="phone" required>
+      </li>
+      <li class="row">
+        <label for="i-pw">Password<span aria-label="required">*</span></label>
+        <input type="password" name="initial-password" id="i-pw" required>
+      </li>
+      <li class="row">
+        <label for="f-pw">Confirm Password<span aria-label="required">*</span></label>
+        <input type="password" name="final-password" id="f-pw" required>
+      </li>
+    </ul>
+  </form>
+</body>
+</html>
