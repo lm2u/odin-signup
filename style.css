@@ -14,6 +14,14 @@
   font-weight:normal;
 }
 
+:root{
+  --hue:249;
+  --saturation:35%;
+  --lightness:56%;
+  --bg-color: hsl(var(--hue),var(--saturation),var(--lightness));
+  --container-color: hsl(var(--hue),var(--saturation),calc(var(--lightness) - 20%))
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -21,9 +29,13 @@
 }
 
 body{
-  background-color: #7469B6;
+  background-color: var(--bg-color);
   font-family: "poppins";
   font-weight: 300;
+  display:flex;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 ul{
@@ -32,18 +44,51 @@ ul{
   /* border: 1px solid purple; */
 }
 
-.right-content{
+.wrapper{
+  width:70vw;
+  height:70vh;
+  background-color:var(--container-color);
   display:flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 3%;
+}
+
+.left-content{
+  width:35vw;
+  position:relative;
+}
+
+h1{
+  color:white;
+  font-size:100px;
+  line-height: 90px;
+  margin-top:330px;
+  position:absolute;
+  z-index: 1;
+}
+
+.odin-logo{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:url("./assets/odin-lined.png");
+  background-repeat: no-repeat;
+  left:30px;
+  top:50px;
+  opacity: 50%;
+}
+
+.right-content{
+  margin-right:4rem;
+  display:flex;
   margin-top: 4rem;
 }
 
 .form-card{
-  background-color:#fefefe;
+  margin-top: 40px;
+  background-color:#fff;
   border-radius: 10px; 
-  box-shadow: 100px;
-  min-height: 400px;
+  height: 380px;
+  width: 550px;
 }
 
 .form-container{
@@ -85,32 +130,47 @@ input{
   padding: 6px;
 }
 
-input:required{
+/* input:required{
   border-bottom: 1.5px solid #D6D9DC !important;
-}
+} */
 
 input:invalid{
   border-bottom: 1.5px solid red !important;
 }
 
-input:valid{
-  border-bottom: 1.5px solid #7469B6 !important;
-}
+/* input:valid{
+  border-bottom: 1.5px solid var(--bg-color) !important;
+} */
 
 
 span {
   color:red;
 }
 
-button{
-  margin: 20px;
+.create-button{
+  display:flex;
+  margin-top:20px;
+  margin-left:25px;
+  /* justify-content: space-between; */
+  gap:10px;
+}
 
+button{
+  /* margin: 20px 20px 0px 20px; */
   font-family:"poppins";
   padding: 0.5em 1em;
   text-decoration: none;
   border:none;
   border-radius: 5px;
-  background-color: #7469B6;
-  color:#D6D9DC
+  background-color: var(--bg-color);
+  color:#fff;
+  font-weight: bold;
 }
 
+button:hover{
+  background-color: var(--bg-color);
+}
+
+p{
+  padding-bottom:40px;
+}
