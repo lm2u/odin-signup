@@ -41,13 +41,13 @@ ul{
 
 .form-card{
   background-color:#fefefe;
-  max-width: 800px;
   border-radius: 10px; 
   box-shadow: 100px;
+  min-height: 400px;
 }
 
 .form-container{
-  padding: 2em;
+  padding-left:1.5em;
   display:flex;
   flex-wrap:wrap;
   gap: 8px;
@@ -59,51 +59,58 @@ ul{
   flex-direction: column;
 }
 
+.first-row,
+.second-row,
+.third-row{
+  margin-top:0.5em;
+  margin-right:2em;
+}
+
 h2 {
   font-size:1.5rem;
   font-family: "poppins";
   font-weight: bold;
-  margin-left: 1rem;  
+  margin-left: 1em;  
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 label {
   min-height: 1.5rem;
 }
 
-.row input[type='email'],
-.row input[type='password'],
-.row input[type='tel'],
-.row input[type='text']{
+input{
   border: 1.5px solid #D6D9DC;
   border-radius:2px;
   padding: 6px;
 }
 
-.row input[type='email']:invalid,
-.row input[type='password']:invalid,
-.row input[type='tel']:invalid,
-.row input[type='text']:invalid{
-  border-bottom: 1px solid red;
+input:required{
+  border-bottom: 1.5px solid #D6D9DC !important;
 }
 
-.row input[type='email']:valid,
-.row input[type='password']:valid,
-.row input[type='tel']:valid,
-.row input[type='text']:valid{
-  border-bottom: 1px solid #7469B6;
+input:invalid{
+  border-bottom: 1.5px solid red !important;
 }
+
+input:valid{
+  border-bottom: 1.5px solid #7469B6 !important;
+}
+
 
 span {
   color:red;
 }
 
 button{
+  margin: 20px;
+
   font-family:"poppins";
-  padding: 8px;
+  padding: 0.5em 1em;
   text-decoration: none;
   border:none;
   border-radius: 5px;
-  background-color: #FFDFD6;
+  background-color: #7469B6;
+  color:#D6D9DC
 }
 
